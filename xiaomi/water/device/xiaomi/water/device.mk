@@ -1,0 +1,5 @@
+PRODUCT_DEVICE := water
+PRODUCT_NAME := water
+PRODUCT_MODEL := Redmi A2
+PRODUCT_BRAND := Xiaomi
+
