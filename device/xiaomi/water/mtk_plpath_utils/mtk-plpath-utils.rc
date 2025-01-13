@@ -1,0 +1,34 @@
+# MediaTek Helio G36 (MT6765) platform-specific configuration
+# This file configures various platform utilities and paths for power management
+
+on boot
+    # Enable power-lock path (plpath) utilities for the device
+    # This section is platform-specific and may include steps to optimize power states
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor powersave
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor powersave
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor powersave
+
+    # Set up voltage levels and frequencies for efficient power management
+    write /sys/devices/system/cpu/cpu0/online 1
+    write /sys/devices/system/cpu/cpu1/online 1
+    write /sys/devices/system/cpu/cpu2/online 1
+    write /sys/devices/system/cpu/cpu3/online 1
+
+    # Additional power-saving features specific to Helio G36
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1200000
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1200000
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1200000
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1200000
+
+    # Enable frequency scaling for power efficiency
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 200000
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 200000
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 200000
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 200000
+
+    # Optional: Disable unused cores during low-power states
+    write /sys/devices/system/cpu/cpu4/online 0
+    write /sys/devices/system/cpu/cpu5/online 0
+    write /sys/devices/system/cpu/cpu6/online 0
+    write /sys/devices/system/cpu/cpu7/online 0
