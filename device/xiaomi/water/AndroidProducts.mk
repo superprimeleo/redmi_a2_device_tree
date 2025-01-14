@@ -1,5 +1,5 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_water.mk
+    $(LOCAL_DIR)/ofrp_water.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_water-eng
+    ofrp_water-eng
