@@ -1,8 +1,6 @@
 # Inherit from base AOSP product.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-# Inherit common OrangeFox configuration
-$(call inherit-product, vendor/recovery/orangefox.mk)
 
 # Inherit from the water device configuration
 $(call inherit-product, device/xiaomi/water/device.mk)
