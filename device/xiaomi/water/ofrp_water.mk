@@ -1,15 +1,15 @@
-# Inherit from those products. Most specific first.
+# Inherit from base AOSP product.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-# Inherit some common TWRP stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
+# Inherit common OrangeFox configuration
+$(call inherit-product, vendor/recovery/orangefox.mk)
 
-
-# Inherit from water device
+# Inherit from the water device configuration
 $(call inherit-product, device/xiaomi/water/device.mk)
 
+# Device specific details
 PRODUCT_DEVICE := water
-PRODUCT_NAME := twrp_water
-PRODUCT_BRAND := redmi
-PRODUCT_MODEL := water
-PRODUCT_MANUFACTURER := xiaomi
+PRODUCT_NAME := ofrp_water
+PRODUCT_BRAND := Redmi
+PRODUCT_MODEL := Redmi A2
+PRODUCT_MANUFACTURER := Xiaomi
