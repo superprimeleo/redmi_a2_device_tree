@@ -1,4 +1,4 @@
-LOCAL_PATH := device/xiaomi/ice
+LOCAL_PATH := device/xiaomi/water
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
